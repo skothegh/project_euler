@@ -28,6 +28,7 @@ fn lcm(nums: &[isize]) -> isize {
 
 }
 
+
 fn euclid(a: isize, b: isize) -> isize {
     // euclid converges to gcd of two numbers
     // b will be 0 by the end of it and only a will be left
