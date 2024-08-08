@@ -13,7 +13,7 @@ fn lcm(nums: &[isize]) -> isize {
     // by all numbers 1..20
 
     // Solution? Find least common multiple
-    // lcm(a,b) = |a*b| / gcd(a,b)
+    // lcm(a,b) = |a*b| / gcd(a,b) 
     // find gcd -> euclid
     // calculate lcm of n numbers recursively
     
