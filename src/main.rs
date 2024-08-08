@@ -1,21 +1,34 @@
 fn main() {
-    let a = 3;
-    let b = 6;
-    println!("{}",euclid(a,b));
+    println!("{}",p005());
 }
 
 
-fn p005() -> i32 {
+fn p005() -> isize {
+    let n = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+    lcm(&n)
+}
+
+fn lcm(nums: &[isize]) -> isize {
     // find smalles number evenly divisible 
     // by all numbers 1..20
 
     // Solution? Find least common multiple
     // lcm(a,b) = |a*b| / gcd(a,b)
     // find gcd -> euclid
-    5
+    // calculate lcm of n numbers recursively
+    
+    if nums.len() == 1{
+        return nums[0];
+    }
+    // pick first element
+    let a = nums[0];
+    // recursively calc lcm of remaining elements
+    let b = lcm(&nums[1..]);
+    a * b / euclid(a , b)
+
 }
 
-fn euclid(a: i32, b: i32) -> i32 {
+fn euclid(a: isize, b: isize) -> isize {
     // euclid converges to gcd of two numbers
     // b will be 0 by the end of it and only a will be left
 
