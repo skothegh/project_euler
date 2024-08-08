@@ -37,7 +37,7 @@ fn euclid(a: isize, b: isize) -> isize {
     }
     euclid(b, a % b) // note this is the remainder not the mod!
 }
-//test
+
 
 fn p004() -> (i32,i32,i32) { 
     // Find the largest Palindrome number that is a product of 
