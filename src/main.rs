@@ -1,11 +1,45 @@
 fn main() {
-    let j = p003();
-    println!("{j}");
+    let sl = p004();
+    println!("palindrome: {}, first: {}, second: {}", sl.0, sl.1, sl.2)
 }
 
 
-fn p004() {
-    
+fn p004() -> (i32,i32,i32) {
+    // Find the largest Palindrome number that is a product of 
+    // two 3-digit numbers
+  
+    // SOlution: Brute force
+    // transform each produt into string slice? and reverse it
+    // compare slice with reverse
+    // we are using ASCII so rev is fine! breaks if
+    // we are using charcters made up of more bytes
+  
+    let mut pal = 0;
+    let mut first = 0;
+    let mut second = 0;
+
+    for i in 100..1000 {
+        for j in 100..1000{
+
+            let x = i*j;
+            let y = x.to_string();
+            let r: String = y   
+                .chars() // iterates over chars 
+                .rev() // reverse the iterator
+                .collect(); // create new string from iterator
+            
+            if y == r && x > pal {
+                pal = x;
+                first = i;
+                second = j;
+            }
+            
+        }
+    }
+
+    (pal, first, second)
+
+
 }
 
 
