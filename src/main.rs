@@ -8,7 +8,7 @@ fn p004() -> (i32,i32,i32) {
     // Find the largest Palindrome number that is a product of 
     // two 3-digit numbers
   
-    // SOlution: Brute force
+    // Solution: Brute force
     // transform each produt into string slice? and reverse it
     // compare slice with reverse
     // we are using ASCII so rev is fine! breaks if
