@@ -4,6 +4,11 @@ fn main() {
 }
 
 
+fn p004() {
+    
+}
+
+
 fn p003() -> isize {
     // What is the largest prime factor of n?
     let mut n: isize = 600851475143;
