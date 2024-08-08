@@ -1,8 +1,29 @@
 fn main() {
-    let sl = p004();
-    println!("palindrome: {}, first: {}, second: {}", sl.0, sl.1, sl.2)
+    let a = 3;
+    let b = 6;
+    println!("{}",euclid(a,b));
 }
 
+
+fn p005() -> i32 {
+    // find smalles number evenly divisible 
+    // by all numbers 1..20
+
+    // Solution? Find least common multiple
+    // lcm(a,b) = |a*b| / gcd(a,b)
+    // find gcd -> euclid
+    5
+}
+
+fn euclid(a: i32, b: i32) -> i32 {
+    // euclid converges to gcd of two numbers
+    // b will be 0 by the end of it and only a will be left
+
+    if b == 0 {
+        return a;
+    }
+    euclid(b, a % b) // note this is the remainder not the mod!
+}
 
 fn p004() -> (i32,i32,i32) {
     // Find the largest Palindrome number that is a product of 
